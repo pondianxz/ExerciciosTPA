@@ -3,15 +3,57 @@ import java.util.Scanner;
 public class Exercicio12 {
 
 	public static void main(String[] args) {
-		// fila da merenda
+		// 45 27 75 32 84 5 64 66 62 46
+		// testar se a senha existe, e se ela ja foi usada
 		Scanner sc = new Scanner(System.in);
-		int a[], i;
+		int a[], u[], nUsadas=0, i, j;
 		final int TAM = 10;
 		a = new int[TAM];
-
+		u = new int[TAM];
+		boolean ex=false;
 		
+		for(i=0;i<TAM;i++) {
+			a[i]=(int)(Math.random()*100);
+		}
 		
-		sc.close();
+		while(true) {
+			for(i=0;i<TAM;i++) {
+				System.out.print(a[i]+" ");
+			}
+			System.out.println();
+			
+			for(i=0;i<TAM;i++) {
+				System.out.print(u[i]+" ");
+			}
+			System.out.println();
+			
+			
+			int s=sc.nextInt();
+			
+			for(i=0;i<TAM;i++) {
+				if(a[i]==s) {
+					ex=true;
+					break;
+				}
+			}
+			
+			if(ex) {
+				for(i=0;i<TAM;i++) {
+					if(u[i]==s) {
+						System.out.println("Nao vai repetir");
+						break;
+					}else if(u[i]!=s) {
+						System.out.println("Vai la comer amigao");
+						u[nUsadas]=s;
+						nUsadas++;
+						break;
+					}
+				}				
+			}else {
+				System.out.println("A senha nao existe");
+			}
+		}
+		
 	}
 
 }
