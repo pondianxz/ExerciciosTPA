@@ -5,7 +5,7 @@ public class Exercicio01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a[], b[], i, j=0, k=0;
-		final int TAM = 8;
+		final int TAM = 20;
 		a = new int[TAM];
 		b = new int[TAM];
 		
