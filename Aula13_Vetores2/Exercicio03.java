@@ -8,42 +8,36 @@ public class Exercicio03 {
 		final int TAM = 10;
 		a = new int[TAM];
 		
-		for(i=0; i<TAM; i++) {
+		for(i=0;i<TAM;i++) {
 			System.out.println("Digite o "+(i+1)+"º valor do vetor:");
 			a[i] = sc.nextInt();
 		}
 		
-		System.out.print("[");
-		for(i=0; i<TAM; i++) {
-			System.out.print(a[i]);
-			if(i != TAM-1) {
-				System.out.print(",  ");
-			}
+		for(i=0;i<TAM;i++) {
+			System.out.print(a[i]+" ");
 		}
-		System.out.print("]\n");
+		System.out.println();
 		
-		for(i=0; i<TAM; i++) {
-			boolean primo = true;
+		for(i=0;i<TAM;i++) {
+			boolean primo=true;
 			
-			if(a[i] == 1) {
-				primo = false;
+			if(a[i]==1) {
+				primo=false;
 			}
 			
-			for(j=2; j<a[i]; j++) {
-				if(a[i]%j == 0) {
-					primo = false;
+			for(j=2;j<a[i];j++) {
+				if(a[i]%j==0) {
+					primo=false;
 					break;
 				}
 			}
 			
 			if(primo) {
-				System.out.print("PRIMO");
+				System.out.print("P");
 			}else {
-				System.out.print("NAO");
+				System.out.print("N");
 			}
-			if(i != TAM-1) {
-				System.out.print(",  ");
-			}
+			System.out.print(" ");
 		}
 		
 		sc.close();
