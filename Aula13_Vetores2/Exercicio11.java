@@ -14,6 +14,7 @@ public class Exercicio11 {
 			a[i]=sc.nextInt();
 		}
 
+		System.out.println("Valor a procurar:");
 		int x=sc.nextInt();
 		
 		for(i=0;i<TAM;i++) {
@@ -23,9 +24,9 @@ public class Exercicio11 {
 		}
 		
 		if(ta) {
-			System.out.println("ta sim");
+			System.out.println("Esse elemento existe");
 		}else {
-			System.out.println("ta nao");
+			System.out.println("Esse elemento não existe");
 		}
 		
 		sc.close();
