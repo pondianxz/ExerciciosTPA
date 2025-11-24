@@ -4,8 +4,8 @@ public class Exercicio13 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a[], i;
 		final int TAM = 10;
+		int a[], i, j=TAM;
 		a = new int[TAM];
 		boolean p=false;
 
@@ -15,11 +15,13 @@ public class Exercicio13 {
 		}
 
 		for(i=0;i<TAM;i++) {
-			if(a[i]==a[TAM-i-1]) {
+			if(a[i]==a[j-1]) {
 				p=true;
 			}else {
 				p=false;
+				break;
 			}
+			j--;
 		}
 		
 		if(p) {
